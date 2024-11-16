@@ -4,9 +4,10 @@ const path = require("path");
 const server = jsonServer.create();
 const router = jsonServer.router(path.join(__dirname, "db", "db.json"));
 const middlewares = jsonServer.defaults();
+require('dotenv').config()
 
 const corsOptions = {
-  origin: 'https://flatironjobsearch.netlify.app',
+  origin: process.env.FRONTEND_ORIGIN,
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
