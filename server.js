@@ -6,7 +6,7 @@ const router = jsonServer.router(path.join(__dirname, "db", "db.json"));
 const middlewares = jsonServer.defaults();
 
 const corsOptions = {
-  origin: 'http://example.com',
+  origin: 'https://flatironjobsearch.netlify.app',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
